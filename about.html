@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHardware - About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* About Page Specific Styles */
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #111;
+  }
+
+  .section-header h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: rgb(253, 126, 8);
+  }
+
+  .section-header p {
+    font-size: 18px;
+    color: #ffa938;
+  }
+
+        .page-banner {
+            background-image: url('assests/Images/abt1.png');
+            background-size: contain;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: rgb(253, 126, 8);
+            position: relative;
+        }
+        
+        .page-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .page-banner-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+        
+        .page-banner h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-story {
+            padding: 80px 0;
+        }
+        
+        .story-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .story-text {
+            flex: 1;
+        }
+        
+        .story-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        
+        .story-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .mission-vision {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .mv-cards {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .mv-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            flex: 1;
+            transition: transform 0.3s ease;
+        }
+        
+        .mv-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .mv-icon {
+            font-size: 3rem;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+        
+        .mv-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: rgb(253, 126, 8);;
+        }
+        
+        .our-team {
+            padding: 80px 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .member-image {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .team-member:hover .member-image img {
+            transform: scale(1.1);
+        }
+        
+        .member-info {
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .member-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .member-info p {
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+        
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .member-social a {
+            color: #2563eb;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .member-social a:hover {
+            color: #1e40af;
+        }
+        
+        .company-stats {
+            background-color: white;
+            color: rgb(17, 76, 112);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stat-text {
+            font-size: 1.2rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .story-content {
+                flex-direction: column;
+            }
+            
+            .mv-cards {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-banner {
+                height: 300px;
+            }
+            
+            .page-banner h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-banner {
+                height: 250px;
+            }
+            
+            .page-banner h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:info@techhardware.com"><i class="fas fa-envelope"></i> info@techhardware.com</a>
+                <a href="tel:+91 9999045450"><i class="fas fa-phone"></i> +91 9999045450</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assests/Images/logo.jpg" alt="TechHardware Logo">
+                <span>TechHardware</span>
+            </a>
+            
+            <nav class="navbar" style="color: rgb(253, 126, 8);">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container page-banner-content">
+            <h1>About TechHardware</h1>
+            <p style="color: white; font-weight: bold; font-size: 25px;">Innovative hardware solutions since 2010</p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="about-story">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Story</h2>
+                <p style="color: rgb(6, 30, 44);">From humble beginnings to industry leader</p>
+            </div>
+            
+            <div class="story-content">
+                <div class="story-text" style="color: rgb(17, 76, 112);">
+                    <p>Founded in 2010 by a team of hardware enthusiasts, TechHardware started as a small shop in Silicon Valley with a vision to provide high-quality components at affordable prices. What began as a passion project quickly grew into a trusted name in the hardware industry.</p>
+                    <p>Over the years, we've expanded our product offerings while maintaining our commitment to quality and customer satisfaction. Our team of experts brings decades of combined experience to help you find the perfect hardware solutions for your needs.</p>
+                    <p>Today, we serve customers across North America and Europe, with plans to expand our global reach. Despite our growth, we remain true to our core values of integrity, innovation, and exceptional customer service.</p>
+                </div>
+                <div class="story-image">
+                    <img src="assests/Images/story.png" alt="Our Story">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Mission & Vision</h2>
+                <p style="color: rgb(6, 30, 44);">What drives us forward</p>
+            </div>
+            
+            <div class="mv-cards">
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p style="color: rgb(17, 76, 112);">To provide innovative, reliable hardware solutions that empower our customers to build and create without limitations. We strive to make cutting-edge technology accessible to everyone.</p>
+                </div>
+                
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p style="color: rgb(17, 76, 112);">To be the global leader in hardware innovation, setting industry standards for quality and performance while maintaining our commitment to customer satisfaction.</p>
+                </div>
+                
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Our Values</h3>
+                    <p style="color: rgb(17, 76, 112);">Integrity, innovation, and customer satisfaction are at the core of everything we do. We believe in building lasting relationships based on trust and quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="our-team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Team</h2>
+                <p style="color: rgb(6, 30, 44);">The talented people behind TechHardware</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assests/Images/ai1c.png.jpeg" alt="Chittatosh Patil">
+                    </div>
+                    <div class="member-info">
+                        <h3>Chittatosh Patil</h3>
+                        <p>CEO & Founder</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assests/Images/ai2p.png.jpeg" alt="Prerna Patil">
+                    </div>
+                    <div class="member-info">
+                        <h3>Prerna Patil</h3>
+                        <p>CTO</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assests/Images/ai3p.png.jpeg" alt="Maya Malhotra">
+                    </div>
+                    <div class="member-info">
+                        <h3>Maya Malhotra</h3>
+                        <p>Head of Engineering</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assests/Images/ai4s.png.jpeg" alt="Shreya Kamble">
+                    </div>
+                    <div class="member-info">
+                        <h3>Shreya Kamble</h3>
+                        <p>Director of Sales</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Stats Section -->
+    <section class="company-stats">
+        <div class="container">
+            <div class="section-header">
+                <h2>By The Numbers</h2>
+                <p style="color: rgb(6, 30, 44);">Our growth and impact</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">13+</div>
+                    <div class="stat-text">Years in Business</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-text">Employees Worldwide</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-text">Satisfied Customers</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-text">Customer Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TechHardware</h3>
+                    <p>Providing high-quality hardware solutions since 2010. Our mission is to deliver innovative and reliable products to our customers.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f" style="color: blue;"></i></a>
+                        <a href="#"><i class="fab fa-twitter" style="color: skyblue"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in" style="color: blue;"></i></a>
+                        <a href="#"><i class="fab fa-instagram" style="color: pink;"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col" style="margin-left: 60px;">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col" style="margin-left: 40px;">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="products.html">Processors</a></li>
+                        <li><a href="products.html">Motherboards</a></li>
+                        <li><a href="products.html">Memory</a></li>
+                        <li><a href="products.html">Storage</a></li>
+                    </ul>
+                </div>
+                
+               <div class="footer-col">
+                    <div class="footer-col" style="text-align: center; padding: 0;">
+    <h3 style="
+        margin: 0;
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: bold;
+    ">
+        Contact Info
+    </h3>
+
+    <ul style="
+        list-style: none;
+        padding: 0;
+        margin-top: 40px; /* 👈 This creates the space you need */
+    ">
+        <li style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px; color: #ccc;">
+            <i class="fas fa-map-marker-alt" style="color: orange; margin-right: 8px; width: 20px;"></i>
+            <span>123 Tech Street, Silicon Valley</span>
+        </li>
+        <li style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px; color: #ccc;">
+            <i class="fas fa-envelope" style="color: orange; margin-right: 8px; width: 20px;"></i>
+            <span>info@techhardware.com</span>
+        </li>
+        <li style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px; color: #ccc;">
+            <i class="fas fa-phone" style="color: orange; margin-right: 8px; width: 20px;"></i>
+            <span>+91 9999045450</span>
+        </li>
+    </ul>
+</div>
+
+            </div>
+
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechHardware. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

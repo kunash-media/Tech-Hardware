@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHardware - Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:info@techhardware.com"><i class="fas fa-envelope"></i> info@techhardware.com</a>
+                <a href="tel:+91 9999045450"><i class="fas fa-phone"></i> +91 9999045450</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assests/Images/logo.jpg" alt="TechHardware Logo">
+                <span>TechHardware</span>
+            </a>
+            
+            <nav class="navbar">
+                <ul class="nav-list" style="color: rgb(253, 126, 8);">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link active">Products</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+  <section class="products-section" style="background-color: #0a1c24; padding: 40px 0;">
+
+        <div class="container">
+            <div class="section-header">
+                <h2>Hardware Products</h2>
+                <p style="color: white;">Browse our extensive collection of hardware components</p>
+            </div>
+            
+            <div class="filter-controls" style="text-align: center; margin-bottom: 40px; margin-top: 40px;">
+    <button class="btn filter-btn active" data-filter="all" style="margin: 5px 10px;">All Products</button>
+    <button class="btn filter-btn" data-filter="processors" style="margin: 5px 10px;">Processors</button>
+    <button class="btn filter-btn" data-filter="motherboards" style="margin: 5px 10px;">Motherboards</button>
+    <button class="btn filter-btn" data-filter="memory" style="margin: 5px 10px;">Memory</button>
+    <button class="btn filter-btn" data-filter="storage" style="margin: 5px 10px;">Storage</button>
+</div>
+
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="processors">
+                    <div class="product-image">
+                        <img src="assests/Images/p1.png" alt="High-Speed Processor">
+                    </div>
+                    <div class="product-info">
+                        <h3>High-Speed Processor</h3>
+                        <p>8-core, 16-thread processor with 4.7GHz boost clock</p>
+                        <div class="product-price">₹ 10,000</div>
+                        <a href="#" class="btn view-details">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card" data-category="motherboards">
+                    <div class="product-image">
+                        <img src="assests/Images/p2.png" alt="Advanced Motherboard">
+                    </div>
+                    <div class="product-info">
+                        <h3>Advanced Motherboard</h3>
+                        <p>ATX form factor with PCIe 4.0 and dual M.2 slots</p>
+                        <div class="product-price">₹ 9,000</div>
+                        <a href="#" class="btn view-details">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card" data-category="memory">
+                    <div class="product-image">
+                        <img src="assests/Images/p3.png" alt="High-Capacity Memory">
+                    </div>
+                    <div class="product-info">
+                        <h3>High-Capacity Memory</h3>
+                        <p>32GB DDR4 3600MHz CL16 memory kit (2x16GB)</p>
+                        <div class="product-price">₹ 5,000</div>
+                        <a href="#" class="btn view-details">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card" data-category="storage">
+                    <div class="product-image">
+                        <img src="assests/Images/p4.png" alt="NVMe SSD">
+                    </div>
+                    <div class="product-info">
+                        <h3>NVMe SSD</h3>
+                        <p>1TB PCIe 4.0 NVMe SSD with 7000MB/s read speeds</p>
+                        <div class="product-price">₹ 5,900</div>
+                        <a href="#" class="btn view-details">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card" data-category="processors">
+                    <div class="product-image">
+                        <img src="assests/Images/p5.png" alt="Budget Processor">
+                    </div>
+                    <div class="product-info">
+                        <h3>Budget Processor</h3>
+                        <p>6-core, 12-thread processor with 4.2GHz boost clock</p>
+                        <div class="product-price">₹ 3,000</div>
+                        <a href="#" class="btn view-details">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card" data-category="motherboards">
+                    <div class="product-image">
+                        <img src="assests/Images/p6.png" alt="Micro-ATX Motherboard">
+                    </div>
+                    <div class="product-info">
+                        <h3>Micro-ATX Motherboard</h3>
+                        <p>Compact form factor with WiFi 6 and USB 3.2 Gen 2</p>
+                        <div class="product-price">₹ 2,500</div>
+                        <a href="#" class="btn view-details">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card" data-category="memory">
+                    <div class="product-image">
+                        <img src="assests/Images/p7.png" alt="RGB Memory Kit">
+                    </div>
+                    <div class="product-info">
+                        <h3>RGB Memory Kit</h3>
+                        <p>16GB DDR4 3200MHz RGB memory with customizable lighting</p>
+                        <div class="product-price">₹ 7,000</div>
+                        <a href="#" class="btn view-details">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card" data-category="storage">
+                    <div class="product-image">
+                        <img src="assests/Images/p8.png" alt="SATA SSD">
+                    </div>
+                    <div class="product-info">
+                        <h3>SATA SSD</h3>
+                        <p>2TB SATA III SSD with 560MB/s read speeds</p>
+                        <div class="product-price">₹ 5,500</div>
+                        <a href="#" class="btn view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Modal -->
+    <div class="product-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-product-image">
+                <img src="" alt="Product Image">
+            </div>
+            <div class="modal-product-info">
+                <h3 class="modal-product-title"></h3>
+                <div class="modal-product-price"></div>
+                <p class="modal-product-description"></p>
+                <div class="modal-product-specs"></div>
+                <a href="contact.html" class="btn">Inquire Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TechHardware</h3>
+                    <p>Providing high-quality hardware solutions since 2010. Our mission is to deliver innovative and reliable products to our customers.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f" style="color: blue;"></i></a>
+                        <a href="#"><i class="fab fa-twitter" style="color: skyblue"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in" style="color: blue;"></i></a>
+                        <a href="#"><i class="fab fa-instagram" style="color: pink;"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col" style="margin-left: 60px;">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col" style="margin-left: 40px;">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="products.html">Processors</a></li>
+                        <li><a href="products.html">Motherboards</a></li>
+                        <li><a href="products.html">Memory</a></li>
+                        <li><a href="products.html">Storage</a></li>
+                    </ul>
+                </div>
+                
+               <div class="footer-col">
+                    <div class="footer-col" style="text-align: center; padding: 0;">
+    <h3 style="
+        margin: 0;
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: bold;
+    ">
+        Contact Info
+    </h3>
+
+    <ul style="
+        list-style: none;
+        padding: 0;
+        margin-top: 40px; /* 👈 This creates the space you need */
+    ">
+        <li style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px; color: #ccc;">
+            <i class="fas fa-map-marker-alt" style="color: orange; margin-right: 8px; width: 20px;"></i>
+            <span>123 Tech Street, Silicon Valley</span>
+        </li>
+        <li style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px; color: #ccc;">
+            <i class="fas fa-envelope" style="color: orange; margin-right: 8px; width: 20px;"></i>
+            <span>info@techhardware.com</span>
+        </li>
+        <li style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px; color: #ccc;">
+            <i class="fas fa-phone" style="color: orange; margin-right: 8px; width: 20px;"></i>
+            <span>+91 9999045450</span>
+        </li>
+    </ul>
+</div>
+
+            </div>
+
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechHardware. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <script>
+        // Product Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                // Filter products
+                productCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Product Details Modal
+        const viewDetailsBtns = document.querySelectorAll('.view-details');
+        const productModal = document.querySelector('.product-modal');
+        const closeModal = document.querySelector('.close-modal');
+        
+        // Sample product data (in a real app, this would come from a database)
+        const products = {
+            'High-Speed Processor': {
+                price: '$299.99',
+                description: '8-core, 16-thread processor with 4.7GHz boost clock',
+                specs: [
+                    '8 Cores / 16 Threads',
+                    'Base Clock: 3.6GHz',
+                    'Boost Clock: 4.7GHz',
+                    '36MB Cache',
+                    '125W TDP'
+                ],
+                image: 'assets/images/p1.png'
+            },
+            'Advanced Motherboard': {
+                price: '$199.99',
+                description: 'ATX form factor with PCIe 4.0 and dual M.2 slots',
+                specs: [
+                    'ATX Form Factor',
+                    'PCIe 4.0 Support',
+                    'Dual M.2 Slots',
+                    '10 USB Ports',
+                    '2.5G Ethernet'
+                ],
+                image: 'assets/images/product2.jpg'
+            },
+            // Add more products as needed
+        };
+        
+        viewDetailsBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const productCard = btn.closest('.product-card');
+
+        const productTitle = productCard.querySelector('h3').textContent;
+        const productPrice = productCard.querySelector('.product-price').textContent;
+        const productDesc = productCard.querySelector('p').textContent;
+        const productImgSrc = productCard.querySelector('img').getAttribute('src');
+
+        document.querySelector('.modal-product-title').textContent = productTitle;
+        document.querySelector('.modal-product-price').textContent = productPrice;
+        document.querySelector('.modal-product-description').textContent = productDesc;
+        document.querySelector('.modal-product-image img').src = productImgSrc;
+
+        const specsContainer = document.querySelector('.modal-product-specs');
+
+        productModal.style.display = 'block';
+    });
+});
+
+        
+        closeModal.addEventListener('click', () => {
+            productModal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === productModal) {
+                productModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
